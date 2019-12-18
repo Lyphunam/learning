@@ -48,6 +48,14 @@ if(isset($_GET['action'])){
 				echo '<link rel="stylesheet" href="assets/vendors/css/vendor.bundle.addons.css">';
 				echo '<link rel="stylesheet" href="assets/css/style.css">';
 				break;
+			case 'thembaigiangsv':
+				echo '<title>Thêm bài giảng sinh viên</title>';
+				echo '<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">';
+				echo ' <link rel="stylesheet" href="assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">';
+				echo '<link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">';
+				echo '<link rel="stylesheet" href="assets/vendors/css/vendor.bundle.addons.css">';
+				echo '<link rel="stylesheet" href="assets/css/style.css">';
+				break;
 			case 'thembaitap':
 				echo '<title>Thêm bài tập</title>';
 				echo '<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">';

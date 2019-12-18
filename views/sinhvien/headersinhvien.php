@@ -136,6 +136,12 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
+            <a class="nav-link" href="index.php?controller=user&action=thembaigiangsv">
+              <i class="menu-icon mdi mdi-laptop"></i>
+              <span class="menu-title">Thêm bài giảng</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="index.php?controller=user&action=xembaigiang">
               <i class="menu-icon mdi mdi-laptop"></i>
               <span class="menu-title">Xem bài giảng</span>

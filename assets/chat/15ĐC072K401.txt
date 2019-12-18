@@ -1,0 +1,4 @@
+may2-e chào cô
+may1-sao e
+may2-xin chào
+may1-ok

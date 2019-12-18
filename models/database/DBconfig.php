@@ -93,15 +93,16 @@
 		}
 		// lay ten danh sach bai hoc
 		public function get_list_lesson($mamon,$maloai){
+			$data = [];
 			$sql = "select * from baihoc where MAMONHOC = '$mamon' and MALOAIBG ='$maloai'";
 			$this->query_DB($sql);
-			if($this->num_rows() == 0){
-				$data[] = NULL;
+			while ($datas = $this->get_Data()) {
+				$data[] = $datas;
 			}
-			else{
-				while ($datas = $this->get_Data()) {
-					$data[] = $datas;
-				}
+			$sql1 = "select * from baihocsv where MAMONHOC = '$mamon' and MALOAIBG ='$maloai'";
+			$this->query_DB($sql1);
+			while ($datas = $this->get_Data()) {
+				$data[] = $datas;
 			}
 			return $data;
 		}
@@ -343,9 +344,21 @@
 			$this->query_DB($sql);
 			return true;
 		}
+		// them du lieu vao bang bai hoc sv
+		public function AddDataToTableBaiHocSV($mamonhoc,$malbg,$mabaihoc,$tenbaihoc,$tentailieu,$lienket,$nguoidang){
+			$sql = "insert into baihocsv values ('$mamonhoc','$malbg','$mabaihoc','$tenbaihoc','$tentailieu','$lienket','$nguoidang')";
+			$this->query_DB($sql);
+			return true;
+		}
 		// Update bài giảng
 		public function UpdateDataTableBaiHoc($mamonhoc,$malbg,$mabaihoc,$tenbaihoc,$lienket){
 			$sql = "update baihoc set MAMONHOC = '$mamonhoc', MALOAIBG = '$malbg', TENBAIHOC = '$tenbaihoc', LIENKETTAILIEU = '$lienket' where MABAIHOC = '$mabaihoc'";
+			$this->query_DB($sql);
+			return true;
+		}
+		// Update bài giảng sv
+		public function UpdateDataTableBaiHocSV($mamonhoc,$malbg,$mabaihoc,$tenbaihoc,$lienket){
+			$sql = "update baihocsv set MAMONHOC = '$mamonhoc', MALOAIBG = '$malbg', TENBAIHOC = '$tenbaihoc', LIENKETTAILIEU = '$lienket' where MABAIHOC = '$mabaihoc'";
 			$this->query_DB($sql);
 			return true;
 		}
@@ -355,7 +368,12 @@
 			$this->query_DB($sql);
 			return true;
 		}
-		
+		// Delete bài giảng SV
+		public function DeleteDataTableBaiHocSV($mabaihoc){
+			$sql = "delete from baihocsv where MABAIHOC = '$mabaihoc'";
+			$this->query_DB($sql);
+			return true;
+		}
 		public function GetAllMaBaiHoc(){
 			$sql = "select MABAIHOC from baihoc";
 			$this->query_DB($sql);
@@ -369,8 +387,23 @@
 			}
 			return $data;
 		}
+		// get all bai học giáo viên upload
 		public function GetAllBaiHocByTenGV($name){
 			$sql = "select * from baihoc where NGUOIDANG = '$name'";
+			$this->query_DB($sql);
+			if ($this->num_rows() != 0) {
+				while ($datas = $this->get_Data()) {
+					$data[] = $datas;
+				}
+			}
+			else{
+				$data = 0;
+			}
+			return $data;
+		}
+		// get all bai học sinh viên upload
+		public function GetAllBaiHocByTenSV($name){
+			$sql = "select * from baihocsv where NGUOIDANG = '$name'";
 			$this->query_DB($sql);
 			if ($this->num_rows() != 0) {
 				while ($datas = $this->get_Data()) {

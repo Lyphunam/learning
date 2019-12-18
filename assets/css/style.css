@@ -16395,6 +16395,31 @@ ul {
   background-color: #4CAF50;
   color: white;
 }
+/* css them bai giang sv*/
+/*css table thêm bài giảng*/
+  #tableBaiGiangSV {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tableBaiGiangSV td, #tableBaiGiangSV th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#tableBaiGiangSV tr:nth-child(even){background-color: #f2f2f2;}
+
+#tableBaiGiangSV tr:hover {background-color: #ddd;}
+
+#tableBaiGiangSV th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
 #thtenbaihoc{
   width: 300px;
 }

@@ -31,6 +31,8 @@ if(isset($_GET['action'])){
 		break;
 		case 'thembaigiang': include_once('controllers/giaovien/thembaigiang.php');
 		break;
+		case 'thembaigiangsv': include_once('controllers/sinhvien/thembaigiang.php');
+		break;
 		case 'thembaitap': include_once('controllers/giaovien/thembaitap.php');
 		break;
 		case 'ketquakiemtra': include_once('controllers/giaovien/ketquakiemtra.php');

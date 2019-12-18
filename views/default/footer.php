@@ -42,6 +42,16 @@
 				echo '<script src="assets/js/jsbaigiang.js"></script>';
 				echo '<script src="assets/js/jschatgv.js"></script>';
 				break;
+			case 'thembaigiangsv':
+				echo '<script src="assets/vendors/js/vendor.bundle.base.js"></script>';
+				echo '<script src="assets/vendors/js/vendor.bundle.addons.js"></script>';
+				echo '<script src="assets/js/off-canvas.js"></script>';
+				echo '<script src="assets/js/misc.js"></script>';
+				echo '<script src="assets/js/dashboard.js"></script>';
+				echo '<script src="assets/js/myjs.js"></script>';
+				echo '<script src="assets/js/jsbaigiang.js"></script>';
+				echo '<script src="assets/js/jschatgv.js"></script>';
+				break;
 			case 'thembaitap':
 				echo '<script src="assets/vendors/js/vendor.bundle.base.js"></script>';
 				echo '<script src="assets/vendors/js/vendor.bundle.addons.js"></script>';
