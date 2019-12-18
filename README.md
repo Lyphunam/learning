@@ -8,7 +8,7 @@ b.	Ứng dụng
 Áp dụng cho trường đại học hoặc các trung tâm dạy học
 II.	Mục đích bài toán
 a.	Đầu vào
-•	Các File tài liệu thuộc định dạng : .doc, .ppt, .pdf
+•	Các đường link google driver của file tài liệu( sử dụng thủ thật "<iframe>"
 •	Link video 
 •	Tài khoản, mật khẩu người dung
 •	Các bài kiểm tra
