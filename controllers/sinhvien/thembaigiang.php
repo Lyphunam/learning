@@ -1,5 +1,5 @@
 <?php
-if (isset($_GET['action'])) {
+if (isset($_GET['actionn'])) {
 		if ($_GET['action'] == 'thembaigiangsv') {
 			$Fun_XBG = new Fun_XemBaiGiang;
 			$data = $db->get_name_subject();
