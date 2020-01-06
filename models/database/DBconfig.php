@@ -387,6 +387,20 @@
 			}
 			return $data;
 		}
+		public function GetAllMaBaiHocSv(){
+			//$sql = "select MABAIHOC from baihoc";
+			$sql = "select MABAIHOC from baihocsv";
+			$this->query_DB($sql);
+			if ($this->num_rows() != 0) {
+				while ($datas = $this->get_Data()) {
+					$data[] = $datas;
+				}
+			}
+			else{
+				$data = 0;
+			}
+			return $data;
+		}
 		// get all bai học giáo viên upload
 		public function GetAllBaiHocByTenGV($name){
 			$sql = "select * from baihoc where NGUOIDANG = '$name'";

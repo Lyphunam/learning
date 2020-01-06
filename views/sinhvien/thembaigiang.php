@@ -56,8 +56,8 @@ if($_SESSION['sinhvien']){
 			                          <input type="hidden" name="mabaihocEdit" id="mabaihocEditsv">
 			                          <input type="text" class="form-control" id="tenbaihocsv" name="tenbaihoc" placeholder="Nhập tên bài học" required/>
 			                        </div>
-			                        <button style="visibility: visible;" type="submit" id="uploadbaigiangsv" name="uploadbaigiang" class="btn btn-success mr-2">UPLOAD</button>
-			                        <button style="visibility: hidden;" type="submit" id="updatebaigiangsv" name="updatebaigiangsv" class="btn btn-success mr-2">UPDATE</button>
+			                        <button style="visibility: visible;" type="submit" id="uploadbaigiangsv" name="uploadbaigiang" class="btn btn-success mr-2">Thêm mới</button>
+			                        <button style="visibility: hidden;" type="submit" id="updatebaigiangsv" name="updatebaigiangsv" class="btn btn-success mr-2">Sửa</button>
 			                    </div>
 			                  </div>
 	                	</div>
